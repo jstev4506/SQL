@@ -1,0 +1,22 @@
+create a store database.
+
+CREATE TABLE kombucha (id integer primary key, flavor text, size text, price integer);
+
+INSERT INTO kombucha VALUES (1,"strawberry","medium",3.75);
+INSERT INTO kombucha VALUES (2,"melon","small",4.00);
+INSERT INTO kombucha VALUES (3,"lemonade ginger","large",5.25);
+INSERT INTO kombucha VALUES (4,"mint","small", 3.60);
+INSERT INTO kombucha VALUES (5,"pink lady apple","extra large",6.15);
+
+display the columns for flavor and size from the table.
+
+SELECT flavor, size FROM kombucha;
+
+display only those kombucha flavors that have a price greater than $3.80/unit.
+
+SELECT * FROM kombucha WHERE price > 3.80 ORDER BY price asc;
+
+select the total price of all kombucha varieties.
+
+SELECT sum(price) FROM kombucha;
+
